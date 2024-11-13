@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"Logica","l":"Main"},{"p":"Logica","l":"Pasajero"},{"p":"Logica","l":"Silla"},{"p":"Logica","l":"Vuelo"}];updateSearchResults();

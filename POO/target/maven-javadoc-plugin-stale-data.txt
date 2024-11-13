@@ -1,0 +1,42 @@
+@options
+@packages
+-encoding
+'UTF-8'
+-protected
+-source
+'17'
+-sourcepath
+'C:/Users/Maxi/Documents/NetBeansProjects/POO/src/main/java'
+-author
+-bottom
+'Copyright &#169; 2024. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'C:/Users/Maxi/Documents/NetBeansProjects/POO/target/site/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'POO 1.0-SNAPSHOT API'
+-use
+-version
+-windowtitle
+'POO 1.0-SNAPSHOT API'
+Logica
+C:\Users\Maxi\Documents\NetBeansProjects\POO\src\main\java = 1718060421255
+C:\Users\Maxi\Documents\NetBeansProjects\POO\target\site\apidocs\allclasses-index.html = 1718103435855
+C:\Users\Maxi\Documents\NetBeansProjects\POO\target\site\apidocs\allpackages-index.html = 1718103435862
+C:\Users\Maxi\Documents\NetBeansProjects\POO\target\site\apidocs\element-list = 1718103435763
+C:\Users\Maxi\Documents\NetBeansProjects\POO\target\site\apidocs\help-doc.html = 1718103435898
+C:\Users\Maxi\Documents\NetBeansProjects\POO\target\site\apidocs\index-all.html = 1718103435885
+C:\Users\Maxi\Documents\NetBeansProjects\POO\target\site\apidocs\index.html = 1718103435888
+C:\Users\Maxi\Documents\NetBeansProjects\POO\target\site\apidocs\jquery-ui.overrides.css = 1718103435935
+C:\Users\Maxi\Documents\NetBeansProjects\POO\target\site\apidocs\member-search-index.js = 1718103435869
+C:\Users\Maxi\Documents\NetBeansProjects\POO\target\site\apidocs\module-search-index.js = 1718103435864
+C:\Users\Maxi\Documents\NetBeansProjects\POO\target\site\apidocs\overview-tree.html = 1718103435833
+C:\Users\Maxi\Documents\NetBeansProjects\POO\target\site\apidocs\package-search-index.js = 1718103435866
+C:\Users\Maxi\Documents\NetBeansProjects\POO\target\site\apidocs\script.js = 1718103435905
+C:\Users\Maxi\Documents\NetBeansProjects\POO\target\site\apidocs\search.js = 1718103435913
+C:\Users\Maxi\Documents\NetBeansProjects\POO\target\site\apidocs\stylesheet.css = 1718103435902
+C:\Users\Maxi\Documents\NetBeansProjects\POO\target\site\apidocs\tag-search-index.js = 1718103435870
+C:\Users\Maxi\Documents\NetBeansProjects\POO\target\site\apidocs\type-search-index.js = 1718103435867
