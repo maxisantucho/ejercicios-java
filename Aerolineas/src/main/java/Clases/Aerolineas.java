@@ -213,7 +213,7 @@ public class Aerolineas {
                         vuelo.asignarSilla(vuelo.getAvion()[i][j], filaNueva, columnaNueva);
                         vuelo.getAvion()[i][j] = null;
                         vuelo.anularSillaX(i, j);
-                        System.out.println("Su silla se cambio exitosamente.");
+                        System.out.println("Su silla se cambio exitosamente");
                         bandera = false;
                     }
                     j++;
