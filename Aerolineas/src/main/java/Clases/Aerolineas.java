@@ -24,7 +24,7 @@ public class Aerolineas {
             System.out.println("5. Consultar vuelo mas vendido");
             System.out.println("6. Terminar vuelo");
             System.out.println("7. Presentar balance de ventas");
-            System.out.println("8. (Metodo eliminar)");
+            System.out.println("8. Mostrar mapa");
             System.out.println("9. Salir del programa");
             System.out.print("Seleccione una opcion: ");
             opcion = Integer.parseInt(sc.nextLine());
@@ -128,7 +128,14 @@ public class Aerolineas {
                     }
                     break;
                 case 8:
-
+                    if(vuelos.isEmpty()) {
+                        System.out.println("Aun no se registran vuelos.");
+                    } else {
+                        for (Vuelo vuelo : vuelos) {
+                            vuelo.mostrarMatrizX();
+                            vuelo.mostrarMatrizSillas();
+                        }
+                    }
                     break;
                 case 9:
                     System.exit(0);
@@ -182,22 +189,13 @@ public class Aerolineas {
         System.out.print("Columna: ");
         int columna = Integer.parseInt(sc.nextLine());
         vuelo.asignarSillaX(fila, columna);
-        System.out.println("Ingrese los datos de su silla");
-        System.out.print("Numero: ");
-        String numero = sc.nextLine();
-        System.out.print("Clase: ");
-        String clase = sc.nextLine();
-        System.out.print("Ubicacion: ");
-        String ubicacion = sc.nextLine();
-        System.out.print("Precio: ");
-        double precio = Double.parseDouble(sc.nextLine());
         System.out.println("Ingrese sus datos personales");
         System.out.print("Nombre: ");
         String nombre = sc.nextLine();
         System.out.print("Numero: ");
         int identificacion = Integer.parseInt(sc.nextLine());
         Pasajero pasajero = new Pasajero(nombre, identificacion);
-        Silla silla = new Silla(numero, clase, ubicacion, precio, pasajero);
+        Silla silla = vuelo.venderSilla(pasajero, fila, columna);
         vuelo.asignarSilla(silla, fila, columna);
         System.out.println("Tiquete vendido exitosamente");
         System.out.println(silla);
@@ -220,8 +218,8 @@ public class Aerolineas {
                     System.out.print("Columna: ");
                     int columnaNueva = Integer.parseInt(sc.nextLine());
                     vueloAsignado.asignarSillaX(filaNueva, columnaNueva);
-                    vueloAsignado.asignarSilla(silla, filaNueva, columnaNueva);
-                    silla = null;
+                    vueloAsignado.venderSilla(silla.getPasajero(), filaNueva, columnaNueva);
+                    vueloAsignado.anularSilla(i, j);
                     vueloAsignado.anularSillaX(i, j);
                     System.out.println("Su silla se cambio exitosamente");
                     bandera = false;
@@ -245,7 +243,7 @@ public class Aerolineas {
                     System.out.print("Desea anular esta silla ? SI / NO: ");
                     String opcion = sc.nextLine();
                     if (opcion.equalsIgnoreCase("si")) {
-                        vueloAsignado.getAvion()[i][j] = null;
+                        vueloAsignado.anularSilla(i, j);
                         vueloAsignado.anularSillaX(i, j);
                         System.out.println("Asiento anulado exitosamente");
                         vueloAsignado.mostrarMatrizX();
