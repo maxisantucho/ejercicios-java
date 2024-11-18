@@ -1,4 +1,3 @@
-
 package Clases;
 
 public class Vuelo {
@@ -10,13 +9,12 @@ public class Vuelo {
     private char[][] sillas = new char[8][4];
     private boolean estado = true;
     private int contador;
-
     public Vuelo(String origen, String destino, String hora) {
         this.origen = origen;
         this.destino = destino;
         this.hora = hora;
     }
-    
+
     public boolean validarHora(String horaVuelo) {
         return hora.equalsIgnoreCase(horaVuelo);
     }
@@ -38,18 +36,38 @@ public class Vuelo {
         }
     }
     
-    public boolean validarIdentificacion(int identificacion) {
-        boolean resultado = true;
-        for (int i = 0; i < avion.length; i++) {
-            for (int j = 0; j < avion[0].length; j++) {
-                if(sillas[i][j] == 'x' && avion[i][j].solicitarPasajero() == identificacion) {
-                    resultado = true;
-                } else {
-                    resultado = false;
+    public Silla buscarSilla(int identificacion) {
+        Silla sillaEncontrada = null;
+        int i = 0;
+        while(i < avion.length && sillaEncontrada == null) {
+            int j = 0;
+            while (j < avion[i].length && sillaEncontrada == null) {
+                Silla silla = avion[i][j];
+                if(silla != null && silla.solicitarPasajero() == identificacion) {
+                    sillaEncontrada = silla;
                 }
+                j++;
             }
+            i++;
         }
-        return resultado;
+        return sillaEncontrada;
+    }
+
+    public boolean identificacionExiste(int identificacion) {
+        boolean idenEncontrada = false;
+        int i = 0;
+        while(i < avion.length && !idenEncontrada) {
+            int j = 0;
+            while (j < avion[i].length && !idenEncontrada) {
+                Silla silla = avion[i][j];
+                if(silla != null && silla.solicitarPasajero() == identificacion) {
+                    idenEncontrada = true;
+                }
+                j++;
+            }
+            i++;
+        }
+        return idenEncontrada;
     }
 
     public void asignarSillaX(int fila, int columna) {
