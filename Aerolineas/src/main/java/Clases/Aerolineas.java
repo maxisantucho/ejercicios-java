@@ -60,14 +60,19 @@ public class Aerolineas {
                         boolean bandera = true;
                         int i = 0;
                         while (i < vuelos.size() && bandera) {
-                            if (vuelos.get(i).validarIdentificacion(identificacion) && vuelos.get(i).estaDisponible()) {
-                                bandera = false;
-                                cambiarSilla(identificacion);
+                            if (vuelos.get(i).identificacionExiste(identificacion)) {
+                                if (vuelos.get(i).estaDisponible()) {
+                                    Silla sillaBuscada = vuelos.get(i).buscarSilla(identificacion);
+                                    if (sillaBuscada != null) {
+                                        bandera = false;
+                                        cambiarSilla(identificacion, i, sillaBuscada);
+                                    }
+                                }
                             }
                             i++;
                         }
                         if (bandera) {
-                            System.out.println("El vuelo ha terminado.");
+                            System.out.println("Error. No se encontro identificacion o el vuelo ha terminado.");
                         }
                     }
                     break;
@@ -80,14 +85,19 @@ public class Aerolineas {
                         boolean bandera = true;
                         int i = 0;
                         while (i < vuelos.size() && bandera) {
-                            if (vuelos.get(i).validarIdentificacion(identificacion) && vuelos.get(i).estaDisponible()) {
-                                bandera = false;
-                                anularTiquete(identificacion);
+                            if (vuelos.get(i).identificacionExiste(identificacion)) {
+                                if (vuelos.get(i).estaDisponible()) {
+                                    Silla sillaBuscada = vuelos.get(i).buscarSilla(identificacion);
+                                    if (sillaBuscada != null) {
+                                        bandera = false;
+                                        anularTiquete(identificacion, i, sillaBuscada);
+                                    }
+                                }
                             }
                             i++;
                         }
                         if (bandera) {
-                            System.out.println("El vuelo ha terminado.");
+                            System.out.println("Error. No se encontro identificacion o el vuelo ha terminado.");
                         }
                     }
                     break;
@@ -193,60 +203,58 @@ public class Aerolineas {
         System.out.println(silla);
     }
 
-    public static void cambiarSilla(int identificacion) {
-        for (Vuelo vuelo : vuelos) {
-            int i = 0;
-            boolean bandera = true;
-            while (i < vuelo.getSillas().length && bandera) {
-                int j = 0;
-                while (j < vuelo.getSillas()[i].length && bandera) {
-                    if (vuelo.getSillas()[i][j] == 'x' && vuelo.getAvion()[i][j].solicitarPasajero() == identificacion) {
-                        System.out.println("Su asiento es el " + vuelo.getAvion()[i][j]);
-                        System.out.println("Se encuentra en la fila " + i + ", columna " + j);
-                        vuelo.mostrarMatrizX();
-                        System.out.println("Ingrese posicion de silla nueva");
-                        System.out.print("Fila: ");
-                        int filaNueva = Integer.parseInt(sc.nextLine());
-                        System.out.print("Columna: ");
-                        int columnaNueva = Integer.parseInt(sc.nextLine());
-                        vuelo.asignarSillaX(filaNueva, columnaNueva);
-                        vuelo.asignarSilla(vuelo.getAvion()[i][j], filaNueva, columnaNueva);
-                        vuelo.getAvion()[i][j] = null;
-                        vuelo.anularSillaX(i, j);
-                        System.out.println("Su silla se cambio exitosamente");
-                        bandera = false;
-                    }
-                    j++;
+    public static void cambiarSilla(int identificacion, int vuelo, Silla silla) {
+        Vuelo vueloAsignado = vuelos.get(vuelo);
+        int i = 0;
+        boolean bandera = true;
+        while (i < vueloAsignado.getSillas().length && bandera) {
+            int j = 0;
+            while (j < vueloAsignado.getSillas()[i].length && bandera) {
+                if (vueloAsignado.getSillas()[i][j] == 'x' && vueloAsignado.getAvion()[i][j].solicitarPasajero() == identificacion) {
+                    System.out.println("Su asiento es la " + silla);
+                    System.out.println("Se encuentra en la fila " + i + ", columna " + j);
+                    vueloAsignado.mostrarMatrizX();
+                    System.out.println("Ingrese posicion de silla nueva");
+                    System.out.print("Fila: ");
+                    int filaNueva = Integer.parseInt(sc.nextLine());
+                    System.out.print("Columna: ");
+                    int columnaNueva = Integer.parseInt(sc.nextLine());
+                    vueloAsignado.asignarSillaX(filaNueva, columnaNueva);
+                    vueloAsignado.asignarSilla(silla, filaNueva, columnaNueva);
+                    silla = null;
+                    vueloAsignado.anularSillaX(i, j);
+                    System.out.println("Su silla se cambio exitosamente");
+                    bandera = false;
                 }
-                i++;
+                j++;
             }
+            i++;
         }
     }
 
-    public static void anularTiquete(int identificacion) {
-        for (Vuelo vuelo : vuelos) {
-            int i = 0;
-            boolean bandera = true;
-            while (i < vuelo.getSillas().length && bandera) {
-                int j = 0;
-                while (j < vuelo.getSillas()[i].length && bandera) {
-                    if (vuelo.getSillas()[i][j] == 'x' && vuelo.getAvion()[i][j].solicitarPasajero() == identificacion) {
-                        System.out.println("Su asiento es el " + vuelo.getAvion()[i][j]);
-                        System.out.println("Se encuentra en la fila " + i + ", columna " + j);
-                        System.out.print("Desea anular esta silla ? SI / NO: ");
-                        String opcion = sc.nextLine();
-                        if (opcion.equalsIgnoreCase("si")) {
-                            vuelo.getAvion()[i][j] = null;
-                            vuelo.anularSillaX(i, j);
-                            System.out.println("Asiento anulado exitosamente");
-                            vuelo.mostrarMatrizX();
-                        }
-                        bandera = false;
+    public static void anularTiquete(int identificacion, int vuelo, Silla silla) {
+        Vuelo vueloAsignado = vuelos.get(vuelo);
+        int i = 0;
+        boolean bandera = true;
+        while (i < vueloAsignado.getSillas().length && bandera) {
+            int j = 0;
+            while (j < vueloAsignado.getSillas()[i].length && bandera) {
+                if (vueloAsignado.getSillas()[i][j] == 'x' && vueloAsignado.getAvion()[i][j].solicitarPasajero() == identificacion) {
+                    System.out.println("Su asiento es el " + vueloAsignado.getAvion()[i][j]);
+                    System.out.println("Se encuentra en la fila " + i + ", columna " + j);
+                    System.out.print("Desea anular esta silla ? SI / NO: ");
+                    String opcion = sc.nextLine();
+                    if (opcion.equalsIgnoreCase("si")) {
+                        vueloAsignado.getAvion()[i][j] = null;
+                        vueloAsignado.anularSillaX(i, j);
+                        System.out.println("Asiento anulado exitosamente");
+                        vueloAsignado.mostrarMatrizX();
                     }
-                    j++;
+                    bandera = false;
                 }
-                i++;
+                j++;
             }
+            i++;
         }
     }
 
@@ -259,14 +267,17 @@ public class Aerolineas {
             vuelo.setContador(contador);
             if (vueloMasVendido.getContador() < vuelo.getContador() && vuelo.estaDisponible()) {
                 vueloMasVendido = vuelo;
-            }
+            }//Jamas le voy a poder terminar el vuelo a vueloMasVendido
         }
-        if (vueloMasVendido.getContador() == 0) {
+        if (!vueloMasVendido.estaDisponible()) {
             System.out.println("El vuelo ha terminado.");
+        } else if (vueloMasVendido.getContador() == 0) {
+            System.out.println("Aun no se han vendido tiquetes.");
+        } else {
+            System.out.println("El vuelo mas vendido fue ");
+            System.out.println(vueloMasVendido);
+            System.out.println("Cantidad de tiquetes vendidos " + vueloMasVendido.getContador());
         }
-        System.out.println("El vuelo mas vendido fue ");
-        System.out.println(vueloMasVendido);
-        System.out.println("Cantidad de tiquetes vendidos " + vueloMasVendido.getContador());
     }
 
     public static void terminarVuelo(int vuelo) {
