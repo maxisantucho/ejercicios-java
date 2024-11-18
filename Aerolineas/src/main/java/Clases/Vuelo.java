@@ -77,7 +77,20 @@ public class Vuelo {
     public void anularSillaX(int fila, int columna) {
         sillas[fila][columna] = '-';
     }
+    
+    public void anularSilla(int fila, int columna) {
+        avion[fila][columna] = null;
+    }
 
+    public Silla venderSilla(Pasajero pasajero, int fila, int columna) {
+        Silla sillaComprada = new Silla("", "", "", 0.0, pasajero);
+        sillaComprada.asignarNumero(fila, columna);
+        sillaComprada.asignasClase(fila, columna);
+        sillaComprada.asignarUbicacion(columna);
+        sillaComprada.asignarPrecio();
+        return sillaComprada;
+    }
+    
     public void asignarSilla(Silla silla, int fila, int columna) {
         avion[fila][columna] = silla;
     }
@@ -133,6 +146,16 @@ public class Vuelo {
     @Override
     public String toString() {
         return "Vuelo{" + "origen=" + origen + ", destino=" + destino + ", hora=" + hora + '}';
+    }
+    
+    public void mostrarMatrizSillas(){
+        for (int i = 0; i < avion.length; i++) {
+            for (int j = 0; j < avion[0].length; j++) {
+                if(avion[i][j] != null) {
+                    System.out.println(avion[i][j]);
+                }
+            }
+        }
     }
 
 }
