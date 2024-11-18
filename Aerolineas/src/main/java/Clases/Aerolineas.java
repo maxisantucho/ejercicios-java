@@ -267,11 +267,9 @@ public class Aerolineas {
             vuelo.setContador(contador);
             if (vueloMasVendido.getContador() < vuelo.getContador() && vuelo.estaDisponible()) {
                 vueloMasVendido = vuelo;
-            }//Jamas le voy a poder terminar el vuelo a vueloMasVendido
+            }
         }
-        if (!vueloMasVendido.estaDisponible()) {
-            System.out.println("El vuelo ha terminado.");
-        } else if (vueloMasVendido.getContador() == 0) {
+        if (vueloMasVendido.getContador() == 0) {
             System.out.println("Aun no se han vendido tiquetes.");
         } else {
             System.out.println("El vuelo mas vendido fue ");
