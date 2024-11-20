@@ -37,7 +37,7 @@ public class Biblioteca {
                         for (int i = 0; i < estantes.size(); i++) {
                             System.out.println(i + ". " + estantes.get(i).getNombreEstante());
                         }
-                        System.out.println(estantes.size() + ". Disponible");
+                        System.out.println(estantes.size() + ". Nuevo estante disponible");
                         System.out.print("Ingrese numero de estante: ");
                         numeroEstante = Integer.parseInt(sc.nextLine());
                         if (numeroEstante >= estantes.size()) {
