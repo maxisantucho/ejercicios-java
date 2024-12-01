@@ -10,23 +10,38 @@ public class Logica {
         
         static Scanner sc = new Scanner(System.in);
         
-        public static void perfectoDefectivoAbundante(int numero) {
+        public static void sonAmigosOno(int num1, int num2) {
+            int sumatoria1 = sumatoriaDivisores(num1);
+            int sumatoria2 = sumatoriaDivisores(num2);
+            if(sumatoria1 == num2 && sumatoria2 == num1) {
+                System.out.println("Son amigos");
+            } else {
+                System.out.println("No son amigos");
+            }
+        }
+        
+        public static int sumatoriaDivisores(int numero) {
             int contador = 1;
             int sumatoria = 0;
-            while(numero != contador) {
+            while(contador <= numero / 2) {
                 if(numero % contador == 0) {
                     sumatoria = sumatoria + contador;
                 }
                 contador++;
             }
-            if(sumatoria == numero) {
-                System.out.println("El numero es perfecto");
-            } else if(sumatoria < numero) {
-                System.out.println("El numero es defectivo");
-            } else if(sumatoria > numero){
-                System.out.println("El numero es abundante");
-            }
+            return sumatoria;
         }
+        
+//        public static void perfectoDefectivoAbundante(int numero) {
+//            int sumatoria = sumatoriaDivisores(numero);
+//            if(sumatoria == numero) {
+//                System.out.println("El numero es perfecto");
+//            } else if(sumatoria < numero) {
+//                System.out.println("El numero es defectivo");
+//            } else if(sumatoria > numero){
+//                System.out.println("El numero es abundante");
+//            }
+//        }
         
 //        public static void rotarNumero(int numero, int veces) {
 //            int exponente = cantidadDigitos(numero) - 1;
@@ -130,7 +145,9 @@ public class Logica {
 
     public static void main(String[] args) {
         
-        perfectoDefectivoAbundante(12);
+        sonAmigosOno(220, 283);
+        
+//        perfectoDefectivoAbundante(496);
         
 //        rotarNumero(19040, 3); El mismo proglema con el 0
         
