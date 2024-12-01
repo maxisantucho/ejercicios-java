@@ -10,6 +10,59 @@ public class Logica {
         
         static Scanner sc = new Scanner(System.in);
         
+        public static void perfectoDefectivoAbundante(int numero) {
+            int contador = 1;
+            int sumatoria = 0;
+            while(numero != contador) {
+                if(numero % contador == 0) {
+                    sumatoria = sumatoria + contador;
+                }
+                contador++;
+            }
+            if(sumatoria == numero) {
+                System.out.println("El numero es perfecto");
+            } else if(sumatoria < numero) {
+                System.out.println("El numero es defectivo");
+            } else if(sumatoria > numero){
+                System.out.println("El numero es abundante");
+            }
+        }
+        
+//        public static void rotarNumero(int numero, int veces) {
+//            int exponente = cantidadDigitos(numero) - 1;
+//            int auxiliar = (int) Math.pow(10, exponente);
+//            for (int i = 0; i < veces; i++) {
+//                int digito = numero % 10;
+//                numero = numero / 10;
+//                int base = auxiliar * digito;
+//                numero = numero + base;
+//                System.out.println(numero);
+//            }
+//        }
+//        
+//        public static int cantidadDigitos(int numero) {
+//            int resultado = 0;
+//            while(numero > 0) {
+//                resultado++;
+//                numero = numero / 10;
+//            }
+//            return resultado;
+//        }
+        
+//        public static int primeroUltimo(int numero) {
+//            int resultado = 0;
+//            if(numero < 10) {
+//                resultado = numero;
+//            } else {
+//                int ultimo = numero % 10;
+//                while(numero >= 10) {
+//                    numero = numero / 10;
+//                }
+//                resultado = (numero * 10) + ultimo;
+//            }
+//            return resultado;
+//        }
+        
 //        public static int invertirNumeros(int numero){
 //            int resultado = 0;
 //            while(numero > 0) {
@@ -37,8 +90,8 @@ public class Logica {
         
 //        public static String mayorMenos(int numero) {
 //            String resultado = "";
-//            int contadorMayor = 1;
-//            int contadorMenor = 1;
+//            int contadorMayor = 0;
+//            int contadorMenor = 0;
 //            int mayor;
 //            int menor;
 //            if(numero > 0) {
@@ -51,7 +104,8 @@ public class Logica {
 //                        mayor = digito;
 //                    } else if(digito < menor) {
 //                        menor = digito;
-//                    } else if(digito == mayor) {
+//                    }
+//                    if(digito == mayor) {
 //                        contadorMayor++;
 //                    } else if (digito == menor) {
 //                        contadorMenor++;
@@ -76,6 +130,12 @@ public class Logica {
 
     public static void main(String[] args) {
         
+        perfectoDefectivoAbundante(12);
+        
+//        rotarNumero(19040, 3); El mismo proglema con el 0
+        
+//        System.out.println(primeroUltimo(234500)); Este funciona
+        
 //        System.out.println(invertirNumeros(3345050));
         
 //        int[] A = {1, 2, 4, 5, 6, 7, 8, 9, 10};
@@ -88,7 +148,7 @@ public class Logica {
 //            System.out.println("El numero se encuentra en la posicion " + pos);
 //        }
         
-//        System.out.println(mayorMenos(861114));
+//        System.out.println(mayorMenos(846111));
         
 //        System.out.println(verificador(54325164));
 //        en el caso que solo querramos los ultimos 2 numeros
