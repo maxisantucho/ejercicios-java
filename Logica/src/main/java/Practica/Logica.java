@@ -10,27 +10,44 @@ public class Logica {
         
         static Scanner sc = new Scanner(System.in);
         
-        public static void sonAmigosOno(int num1, int num2) {
-            int sumatoria1 = sumatoriaDivisores(num1);
-            int sumatoria2 = sumatoriaDivisores(num2);
-            if(sumatoria1 == num2 && sumatoria2 == num1) {
-                System.out.println("Son amigos");
-            } else {
-                System.out.println("No son amigos");
-            }
-        }
+//        public static void numeroNarcisista(int numero) {
+//            int resultado = 0;
+//            int cantidad = cantidadDigitos(numero);
+//            int sumatoria = numero;
+//            while(numero > 0) {
+//                int digito = numero % 10;
+//                int potencia = (int) Math.pow(digito, cantidad);
+//                resultado += potencia;
+//                numero /= 10;
+//            }
+//            if(sumatoria == resultado) {
+//                System.out.println("Es un numero narcisista");
+//            } else {
+//                System.out.println("No es narcisista");
+//            }
+//        }
         
-        public static int sumatoriaDivisores(int numero) {
-            int contador = 1;
-            int sumatoria = 0;
-            while(contador <= numero / 2) {
-                if(numero % contador == 0) {
-                    sumatoria = sumatoria + contador;
-                }
-                contador++;
-            }
-            return sumatoria;
-        }
+//        public static void sonAmigosOno(int num1, int num2) {
+//            int sumatoria1 = sumatoriaDivisores(num1);
+//            int sumatoria2 = sumatoriaDivisores(num2);
+//            if(sumatoria1 == num2 && sumatoria2 == num1) {
+//                System.out.println("Son amigos");
+//            } else {
+//                System.out.println("No son amigos");
+//            }
+//        }
+//        
+//        public static int sumatoriaDivisores(int numero) {
+//            int contador = 1;
+//            int sumatoria = 0;
+//            while(contador <= numero / 2) {
+//                if(numero % contador == 0) {
+//                    sumatoria = sumatoria + contador;
+//                }
+//                contador++;
+//            }
+//            return sumatoria;
+//        }
         
 //        public static void perfectoDefectivoAbundante(int numero) {
 //            int sumatoria = sumatoriaDivisores(numero);
@@ -145,7 +162,9 @@ public class Logica {
 
     public static void main(String[] args) {
         
-        sonAmigosOno(220, 283);
+//        numeroNarcisista(153);
+        
+//        sonAmigosOno(220, 283);
         
 //        perfectoDefectivoAbundante(496);
         
