@@ -10,6 +10,51 @@ public class Logica {
         
         static Scanner sc = new Scanner(System.in);
         
+        public static void dividirRestando(int numero, int divisor) {
+            int resultado = 0;
+            while(divisor <= numero) {
+                 numero -= divisor;
+                 resultado++;
+            }
+            System.out.println("el resultado es: " + resultado);
+            System.out.println("y su reciduo es: " + numero);
+        }
+        
+//        public static void sonNoviosOno(int num1, int num2) {
+//            int sumatoria1 = sumatoriaDivisores(num1);
+//            int sumatoria2 = sumatoriaDivisores(num2);
+//            int totalNovios = num1 + num2 + 1;
+//            if(sumatoria1 == sumatoria2  && sumatoria1 == totalNovios) {
+//                System.out.println("Estos numeros son novios.");
+//            } else {
+//                System.out.println("No son novios");
+//            }
+//        }
+        
+//        public static void intercambiarVariables(int a, int b) {
+//            System.out.println("Valor de a: " + a);
+//            System.out.println("Valor de b: " + b);
+//            a = a + b;
+//            b = a - b;
+//            a = a - b;
+//            System.out.println("Ahora el valor de a es: " + a);
+//            System.out.println("Y el valor de b es: " + b);
+//        }
+        
+//        public static void decimalBinario(int numero) {
+//            int numBinario = 0;
+//            int base = 10;
+//            int exp = 0;
+//            while(numero > 0) {
+//                int residuo = numero % 2;
+//                numBinario += (residuo * ((int) Math.pow(base, exp)));
+//                exp++;
+//                numero /= 2;
+//                
+//            }
+//            System.out.println("El numero binario es " + numBinario);
+//        }
+        
 //        public static void numeroNarcisista(int numero) {
 //            int resultado = 0;
 //            int cantidad = cantidadDigitos(numero);
@@ -36,11 +81,11 @@ public class Logica {
 //                System.out.println("No son amigos");
 //            }
 //        }
-//        
+        
 //        public static int sumatoriaDivisores(int numero) {
 //            int contador = 1;
 //            int sumatoria = 0;
-//            while(contador <= numero / 2) {
+//            while(contador <= numero) {
 //                if(numero % contador == 0) {
 //                    sumatoria = sumatoria + contador;
 //                }
@@ -161,6 +206,14 @@ public class Logica {
 //        }
 
     public static void main(String[] args) {
+        
+        dividirRestando(12, 3);
+        
+//        sonNoviosOno(48, 75);
+        
+//        intercambiarVariables(83, 523);
+        
+//        decimalBinario(12);
         
 //        numeroNarcisista(153);
         
