@@ -10,15 +10,38 @@ public class Logica {
         
         static Scanner sc = new Scanner(System.in);
         
-        public static void dividirRestando(int numero, int divisor) {
-            int resultado = 0;
-            while(divisor <= numero) {
-                 numero -= divisor;
-                 resultado++;
-            }
-            System.out.println("el resultado es: " + resultado);
-            System.out.println("y su reciduo es: " + numero);
-        }
+//        public static void binarioDecimal(int numero) {
+//            int resultado = 0;
+//            int contador = cantidadDigitos(numero);
+//            int numeroFinal = 0;
+//            while(resultado < contador) {
+//                int decimal = numero % 10;
+//                int potencia = (int) (decimal * (Math.pow(2, resultado)));
+//                numeroFinal += potencia;
+//                numero /= 10;
+//                resultado++;
+//            }
+//            System.out.println(numeroFinal);
+//        }
+        
+//        public static void multiplicarSumando(int numero, int multiplo) {
+//            int resultado = 0;
+//            while(multiplo > 0) {
+//                resultado += numero;
+//                multiplo--;
+//            }
+//            System.out.println("El resultado es " + resultado);
+//        }
+        
+//        public static void dividirRestando(int numero, int divisor) {
+//            int resultado = 0;
+//            while(divisor <= numero) {
+//                 numero -= divisor;
+//                 resultado++;
+//            }
+//            System.out.println("el resultado es: " + resultado);
+//            System.out.println("y su reciduo es: " + numero);
+//        }
         
 //        public static void sonNoviosOno(int num1, int num2) {
 //            int sumatoria1 = sumatoriaDivisores(num1);
@@ -116,7 +139,7 @@ public class Logica {
 //                System.out.println(numero);
 //            }
 //        }
-//        
+        
 //        public static int cantidadDigitos(int numero) {
 //            int resultado = 0;
 //            while(numero > 0) {
@@ -207,7 +230,11 @@ public class Logica {
 
     public static void main(String[] args) {
         
-        dividirRestando(12, 3);
+//        binarioDecimal(1101);
+        
+//        multiplicarSumando(5, 5);
+        
+//        dividirRestando(12, 3);
         
 //        sonNoviosOno(48, 75);
         
