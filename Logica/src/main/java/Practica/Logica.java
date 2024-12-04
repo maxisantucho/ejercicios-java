@@ -10,6 +10,40 @@ public class Logica {
         
         static Scanner sc = new Scanner(System.in);
         
+//        public static void numeroUnicornio(int numero) {
+//            int mitad = 0;
+//            int resultado = 0;
+//            if(cantidadDigitos(numero) % 2 == 0) {
+//                mitad = (cantidadDigitos(numero) / 2) - 1;
+//                numero = mitadNumero(mitad, numero);
+//                numero %= 100;
+//                System.out.println(resultadoUnicornio(numero));
+//            } else {
+//                mitad = cantidadDigitos(numero) / 2;
+//                numero = mitadNumero(mitad, numero);
+//                numero %= 10;
+//                System.out.println(resultadoUnicornio(numero));
+//            }
+//        }
+//        
+//        public static String resultadoUnicornio(int resultado) {
+//            String respuesta = "";
+//            if(resultado % 3 == 0) {
+//                respuesta = "Es un numero unicornio";
+//            } else {
+//                respuesta = "No es un numero unicornio";
+//            }
+//            return respuesta;
+//        }
+//        
+//        public static int mitadNumero(int mitad, int numero) {
+//            while(mitad > 0) {
+//                    numero /= 10;
+//                    mitad--;
+//                }
+//            return numero;
+//        }
+        
 //        public static void binarioDecimal(int numero) {
 //            int resultado = 0;
 //            int contador = cantidadDigitos(numero);
@@ -140,14 +174,14 @@ public class Logica {
 //            }
 //        }
         
-//        public static int cantidadDigitos(int numero) {
-//            int resultado = 0;
-//            while(numero > 0) {
-//                resultado++;
-//                numero = numero / 10;
-//            }
-//            return resultado;
-//        }
+        public static int cantidadDigitos(int numero) {
+            int resultado = 0;
+            while(numero > 0) {
+                resultado++;
+                numero = numero / 10;
+            }
+            return resultado;
+        }
         
 //        public static int primeroUltimo(int numero) {
 //            int resultado = 0;
@@ -229,6 +263,12 @@ public class Logica {
 //        }
 
     public static void main(String[] args) {
+        
+//        numeroUnicornio(234534);
+//        
+//        numeroUnicornio(21);
+//        
+//        numeroUnicornio(51713);
         
 //        binarioDecimal(1101);
         
