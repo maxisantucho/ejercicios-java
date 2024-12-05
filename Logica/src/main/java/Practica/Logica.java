@@ -10,17 +10,61 @@ public class Logica {
         
         static Scanner sc = new Scanner(System.in);
         
-        public static void invertirCadena(String objeto) {
-            String resultado = "";
-            for (int i = (objeto.length() - 1); i >= 0; i--) {
-                char cadena = objeto.charAt(i);
-                resultado += cadena; // otra manera es:
-                // resultado = cadena + resultado;
-            }
-            System.out.println(resultado);
-        }
+//        public static void esPalindromo(String palabra) {
+//            String invertida = invertirCadenaWhile(palabra);
+//            if(palabra.equalsIgnoreCase(invertida)) {
+//                System.out.println("Es palindromo");
+//            } else {
+//                System.out.println("No es palindromo");
+//            }
+//        }
+       
+//        public static void esPalindromo2(String palabra) {
+//            int inicio = 0;
+//            int fin = palabra.length() - 1;
+//            boolean bandera = false;
+//            palabra = palabra.toLowerCase();
+//            while(inicio < fin && !bandera) {
+//                if(palabra.charAt(inicio) != palabra.charAt(fin)) {
+//                    bandera = true;
+//                }
+//                inicio++;
+//                fin--;
+//            }
+//            if(bandera) {
+//                System.out.println("No es palindromo");
+//            } else {
+//                System.out.println("Es palindromo");
+//            }
+//        }
         
-        public static void invertirCadenaWhile(String objeto) {
+//        public static void esPalindromo3(String palabra) {
+//            int fin = palabra.length() - 1;
+//            boolean bandera = false;
+//            palabra = palabra.toLowerCase();
+//            for(int inicio = 0; inicio <= fin && !bandera; inicio++, fin--) {
+//                if(palabra.charAt(inicio) != palabra.charAt(fin)) {
+//                    bandera = true;
+//                }
+//            }
+//            if(bandera) {
+//                System.out.println("No es palindromo");
+//            } else {
+//                System.out.println("Es palindromo");
+//            }
+//        }
+        
+//        public static void invertirCadena(String objeto) {
+//            String resultado = "";
+//            for (int i = (objeto.length() - 1); i >= 0; i--) {
+//                char cadena = objeto.charAt(i);
+//                resultado += cadena; // otra manera es:
+//                // resultado = cadena + resultado;
+//            }
+//            System.out.println(resultado);
+//        }
+//        
+        public static String invertirCadenaWhile(String objeto) {
             String resultado = "";
             int contador = objeto.length() - 1;
             while(contador >= 0) {
@@ -28,7 +72,7 @@ public class Logica {
                 resultado += cadena;
                 contador--;
             }
-            System.out.println(resultado);
+            return resultado;
         }
         
 //        public static void esFelizOno(int numero) {
@@ -311,9 +355,17 @@ public class Logica {
 
     public static void main(String[] args) {
         
-        invertirCadena("Unicornio");
+//        esPalindromo3("Hola");
+//        
+//        esPalindromo3("Reconocer");
         
-        invertirCadenaWhile("Dragon");
+//        esPalindromo2("Hola");
+//        
+//        esPalindromo("Reconocer");
+        
+//        invertirCadena("Unicornio");
+        
+//        System.out.println(invertirCadenaWhile("Dragon"));;
         
 //        esFelizOno(203);
 //        
