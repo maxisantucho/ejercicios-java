@@ -10,6 +10,53 @@ public class Logica {
         
         static Scanner sc = new Scanner(System.in);
         
+        public static void invertirCadena(String objeto) {
+            String resultado = "";
+            for (int i = (objeto.length() - 1); i >= 0; i--) {
+                char cadena = objeto.charAt(i);
+                resultado += cadena; // otra manera es:
+                // resultado = cadena + resultado;
+            }
+            System.out.println(resultado);
+        }
+        
+        public static void invertirCadenaWhile(String objeto) {
+            String resultado = "";
+            int contador = objeto.length() - 1;
+            while(contador >= 0) {
+                char cadena = objeto.charAt(contador);
+                resultado += cadena;
+                contador--;
+            }
+            System.out.println(resultado);
+        }
+        
+//        public static void esFelizOno(int numero) {
+//            boolean bandera = true;
+//            int original = numero;
+//            while(bandera) {
+//                int sumatoria = 0;
+//                int reemplazo = numero;
+//                while(reemplazo > 0) {
+//                    int digito = reemplazo % 10;
+//                    int base = (int) Math.pow(digito, 2);
+//                    sumatoria += base;
+//                    reemplazo /= 10;
+//                }
+//                if(sumatoria == 1) {
+//                    System.out.println("Es un numero feliz");
+//                    bandera = false;
+//                } else if(sumatoria == original) {
+//                    System.out.println("No es numero feliz");
+//                    bandera = false;
+//                } else if(sumatoria < 10 && sumatoria != 7) {
+//                    System.out.println("No es numero feliz");
+//                    bandera = false;
+//                }
+//                numero = sumatoria;
+//            }
+//        }
+        
 //        public static void numeroUnicornio(int numero) {
 //            int mitad = 0;
 //            int resultado = 0;
@@ -263,6 +310,14 @@ public class Logica {
 //        }
 
     public static void main(String[] args) {
+        
+        invertirCadena("Unicornio");
+        
+        invertirCadenaWhile("Dragon");
+        
+//        esFelizOno(203);
+//        
+//        esFelizOno(342);
         
 //        numeroUnicornio(234534);
 //        
