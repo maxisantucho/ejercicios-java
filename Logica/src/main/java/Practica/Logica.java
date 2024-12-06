@@ -1,14 +1,55 @@
 
 package Practica;
 
-import java.util.Scanner;
-
 public class Logica {
         
 //        https://www.youtube.com/playlist?list=PLeZ7bixkO9gGIy7i_6CitcOaIzOYTvzg-
 //        el boli sabe
         
-        static Scanner sc = new Scanner(System.in);
+//        public static void cifradoCesar(String cadena, int desplazar) {
+//            String resultado = "";
+//            int longCad = cadena.length();
+//            for (int i = 0; i < longCad; i++) {
+//                char index = cadena.charAt(i);
+//                if(esMayuscula(index)) {
+//                    index += desplazar;
+//                    if(index > 'Z') {
+//                        index -= 26;
+//                    }
+//                } else if(esMinuscula(index)) {
+//                    index += desplazar;
+//                    if(index > 'z') {
+//                        index -= 26;
+//                    }
+//                }
+//                resultado += index;
+//            }
+//            System.out.println(resultado);
+//        }
+//        
+//        private static boolean esMayuscula(char index){
+//            return index >= 'A' && index <= 'Z';
+//        }
+//        
+//        private static boolean esMinuscula(char index){
+//            return index >= 'a' && index <= 'z';
+//        }
+        
+//        public static int contarOcurrencias(String cadena, String subCadena) {
+//            int resultado = 0;
+//            String aux = "";
+//            int logSubCad = subCadena.length();
+//            for(int pos = 0; pos < cadena.length() - logSubCad; pos++) {
+//                for(int i = pos; i < pos + logSubCad; i++) {
+//                    aux += cadena.charAt(i);
+//                }
+//                if(aux.equalsIgnoreCase(subCadena)) {
+//                    resultado++;
+//                }
+//                aux = "";
+//            } ESTE ESTA GENIAL LASTIMA QUE NO LO ENTENDI
+//            return resultado;
+//        }
         
 //        public static void esPalindromo(String palabra) {
 //            String invertida = invertirCadenaWhile(palabra);
@@ -354,6 +395,15 @@ public class Logica {
 //        }
 
     public static void main(String[] args) {
+        
+//        cifradoCesar("Unicornio", 7);
+        
+//        String cadena = "Como una estrella rota, mengua doliente..."
+//                + "\nCuando dos estrellas chocan, mil esquirlas brotan."
+//                + "\nSin ti Danae, mi vida es una derrota. Donde una estrella llora,"
+//                + "\n Orion solloza por tu amor...";
+//        
+//        System.out.println(contarOcurrencias(cadena, "ota"));
         
 //        esPalindromo3("Hola");
 //        
