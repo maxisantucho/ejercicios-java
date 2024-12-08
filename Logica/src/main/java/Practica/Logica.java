@@ -5,7 +5,96 @@ public class Logica {
         
 //        https://www.youtube.com/playlist?list=PLeZ7bixkO9gGIy7i_6CitcOaIzOYTvzg-
 //        el boli sabe
+    
+        public static void caracteresNumericos(String cadena) {
+            int tamArr = cadena.length();
+            int[] arr = new int[tamArr];
+            int num = 0;
+            for (int i = 0; i < tamArr; i++) {
+                char letra = cadena.charAt(i);
+                num = (int) letra;
+                arr[i] = num;
+                System.out.println(arr[i]);
+            }
+        }
+    
+//        public static void formarNumEntero() {
+//            int[] arr = {6, 7, 8, 3};
+//            int resultado = 0;
+//            for (int i = 0; i < arr.length; i++) {
+//                int num = arr[i];
+//                resultado = (resultado * 10) + num;
+//                
+//            }
+//            System.out.println(resultado);
+//        }
+    
+//        public static void llenarArreglo(int tam) {
+//            int[] arr = new int[tam];
+//            for (int i = 0; i < arr.length; i++) {
+//                int numero = (int) (Math.random() * 100);
+//                arr[i] = numero;
+//                System.out.print(arr[i] + "; ");
+//            }
+//        }
         
+        public static int[] llenarArreglo2(int tam) {
+            int[] arr = new int[tam];
+            for (int i = arr.length - 1; i >= 0; i--) {
+                int numero = (int) (Math.random() * 100);
+                arr[i] = numero;
+                System.out.print(arr[i] + "; ");
+            }
+            return arr;
+        }
+    
+//        public static void cifradoVigener(String cadena) {
+//            String resultado = "";
+//            String clave = "SO LOSA IF NHDESP"; //o generarCadena(cadena.length());
+//            for (int i = 0; i < cadena.length(); i++) {
+//                char letraTexto = cadena.charAt(i);
+//                char letraClave = clave.charAt(i);
+//                if(esMinuscula(letraTexto)) {
+//                    letraClave = clave.toLowerCase().charAt(i);
+//                    int valor = (((letraTexto - 'a') + (letraClave - 'a')) % 26) + 'a';
+//                    char letra = (char) valor;
+//                    resultado += letra;
+//                } else if(esMayuscula(letraTexto)) {
+//                    int valor = (((letraTexto - 'A') + (letraClave - 'A')) % 26) + 'A';
+//                    char letra = (char) valor;
+//                    resultado += letra;
+//                } else {
+//                    resultado += letraTexto;
+//                }
+//            }
+//            System.out.println(clave);
+//            System.out.println(resultado);
+//        }
+//        // este ejercicio me jodio    
+//        public static String generarCadena(int longitud) {
+//            String resultado = "";
+//            for (int i = 0; i < longitud; i++) {
+//                int num = (int) (Math.random() * (('Z' - 'A') + 1) + 'A');
+//                char letra = (char) num;
+//                resultado += letra;
+//            }
+//            return resultado;
+//        }
+
+//        public static void generarCadenaAleatoria(int longitud) {
+//            String resultado = "";
+//            int index = longitud;
+//            while(index > 0) {
+//                int num = (int) (Math.random() * (('z' - 'a') + 1)) + 'a';
+//                char letra = (char) num;
+//                if(esMayuscula(letra) || esMinuscula(letra)) {
+//                    resultado += letra;
+//                    index--;
+//                }
+//            }
+//            System.out.println(resultado);
+//        }
+    
 //        public static void cifradoCesar(String cadena, int desplazar) {
 //            String resultado = "";
 //            int longCad = cadena.length();
@@ -15,6 +104,7 @@ public class Logica {
 //                    index += desplazar;
 //                    if(index > 'Z') {
 //                        index -= 26;
+//                        // otra es sacando el modulo y sumarle a 'a' o 'A'
 //                    }
 //                } else if(esMinuscula(index)) {
 //                    index += desplazar;
@@ -26,7 +116,7 @@ public class Logica {
 //            }
 //            System.out.println(resultado);
 //        }
-//        
+        
 //        private static boolean esMayuscula(char index){
 //            return index >= 'A' && index <= 'Z';
 //        }
@@ -104,17 +194,17 @@ public class Logica {
 //            }
 //            System.out.println(resultado);
 //        }
-//        
-        public static String invertirCadenaWhile(String objeto) {
-            String resultado = "";
-            int contador = objeto.length() - 1;
-            while(contador >= 0) {
-                char cadena = objeto.charAt(contador);
-                resultado += cadena;
-                contador--;
-            }
-            return resultado;
-        }
+       
+//        public static String invertirCadenaWhile(String objeto) {
+//            String resultado = "";
+//            int contador = objeto.length() - 1;
+//            while(contador >= 0) {
+//                char cadena = objeto.charAt(contador);
+//                resultado += cadena;
+//                contador--;
+//            }
+//            return resultado;
+//        }
         
 //        public static void esFelizOno(int numero) {
 //            boolean bandera = true;
@@ -395,6 +485,18 @@ public class Logica {
 //        }
 
     public static void main(String[] args) {
+        
+        caracteresNumericos("Draco");
+        
+//        formarNumEntero();
+        
+//        llenarArreglo(5);
+        
+//        cifradoVigener("LA VIDA ES BONITA");
+        
+        //cifradoVigener();
+        
+//        generarCadenaAleatoria(6);
         
 //        cifradoCesar("Unicornio", 7);
         
