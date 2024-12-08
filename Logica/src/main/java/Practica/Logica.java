@@ -6,17 +6,27 @@ public class Logica {
 //        https://www.youtube.com/playlist?list=PLeZ7bixkO9gGIy7i_6CitcOaIzOYTvzg-
 //        el boli sabe
     
-        public static void caracteresNumericos(String cadena) {
-            int tamArr = cadena.length();
-            int[] arr = new int[tamArr];
-            int num = 0;
-            for (int i = 0; i < tamArr; i++) {
-                char letra = cadena.charAt(i);
-                num = (int) letra;
-                arr[i] = num;
-                System.out.println(arr[i]);
-            }
-        }
+//        public static void transformarNumeros() {
+//            int[] arr = {3, 4, 435, 6, 4, 2, 232};
+//            for (int i = 0; i < arr.length; i++) {
+//                if(arr[i] % 2 != 0) {
+//                    arr[i] += 1;
+//                }
+//                System.out.println(arr[i]);
+//            }
+//        }
+        
+//        public static void caracteresNumericos(String cadena) {
+//            int tamArr = cadena.length();
+//            int[] arr = new int[tamArr];
+//            int num = 0;
+//            for (int i = 0; i < tamArr; i++) {
+//                char letra = cadena.charAt(i);
+//                num = (int) letra;
+//                arr[i] = num;
+//                System.out.println(arr[i]);
+//            }
+//        }
     
 //        public static void formarNumEntero() {
 //            int[] arr = {6, 7, 8, 3};
@@ -24,7 +34,6 @@ public class Logica {
 //            for (int i = 0; i < arr.length; i++) {
 //                int num = arr[i];
 //                resultado = (resultado * 10) + num;
-//                
 //            }
 //            System.out.println(resultado);
 //        }
@@ -396,14 +405,14 @@ public class Logica {
 //            }
 //        }
         
-        public static int cantidadDigitos(int numero) {
-            int resultado = 0;
-            while(numero > 0) {
-                resultado++;
-                numero = numero / 10;
-            }
-            return resultado;
-        }
+//        public static int cantidadDigitos(int numero) {
+//            int resultado = 0;
+//            while(numero > 0) {
+//                resultado++;
+//                numero = numero / 10;
+//            }
+//            return resultado;
+//        }
         
 //        public static int primeroUltimo(int numero) {
 //            int resultado = 0;
@@ -486,7 +495,9 @@ public class Logica {
 
     public static void main(String[] args) {
         
-        caracteresNumericos("Draco");
+//        transformarNumeros();
+        
+//        caracteresNumericos("Draco");
         
 //        formarNumEntero();
         
