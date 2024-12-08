@@ -6,6 +6,25 @@ public class Logica {
 //        https://www.youtube.com/playlist?list=PLeZ7bixkO9gGIy7i_6CitcOaIzOYTvzg-
 //        el boli sabe
     
+        
+        
+//        public static void bubbleSort() {
+//            int[] arr = {52, 17, 21, 74, 3, 25, 47};
+//            int elemActual = 0;
+//            for (int i = 0; i < arr.length - 1; i++) {
+//                for (int j = 0; j < arr.length - 1; j++) {
+//                    elemActual = arr[j];
+//                    if(elemActual > arr[j+1]) {
+//                        arr[j] = arr[j+1];
+//                        arr[j+1] = elemActual;
+//                    }
+//                }
+//            }
+//            for (int i = 0; i < arr.length; i++) {
+//                System.out.print(arr[i] + "; ");
+//            }
+//        }
+    
 //        public static void transformarNumeros() {
 //            int[] arr = {3, 4, 435, 6, 4, 2, 232};
 //            for (int i = 0; i < arr.length; i++) {
@@ -494,6 +513,8 @@ public class Logica {
 //        }
 
     public static void main(String[] args) {
+        
+//        bubbleSort();
         
 //        transformarNumeros();
         
