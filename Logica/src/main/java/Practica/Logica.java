@@ -8,6 +8,69 @@ public class Logica {
     
         
         
+//        public static void sonIgualesOno() {
+//            int[] arr1 = {9, 11, 20};
+//            int[] arr2 = {20, 23, 98, 11, 9, 31};
+//            int i = 0;
+//            boolean bandera = true;
+//            while(i < arr1.length && bandera) {
+//                int j = 0;
+//                int aux = 0;
+//                while(j < arr2.length && bandera) {
+//                    if(arr1[i] == arr2[j]){
+//                        aux = arr2[j];
+//                    }
+//                    j++;
+//                }
+//                if(aux != arr1[i]) {
+//                    bandera = false;
+//                }
+//                i++;
+//            }
+//            if(bandera) {
+//                System.out.println("B incluye todos los valores de A");
+//            } else {
+//                System.out.println("B NO incluye los valores de A");
+//            }
+//        }
+    
+//        public static void binarySearch(int num) {
+//            int[] arr = {3, 7, 11, 11, 16, 24, 30, 31};
+//            int res = -1;
+//            int min = 0;
+//            int max = arr.length - 1;
+//            int mid;
+//            while(res == -1 && min <= max) {
+//                mid = (min + max) / 2;
+//                if(arr[mid] == num) {
+//                    res = mid;
+//                } else if(arr[mid] < num) {
+//                    min = mid + 1;
+//                } else {
+//                    max = min - 1;
+//                }
+//            }
+//            if (res == -1) {
+//                System.out.println("no se encontro el numero");
+//            } else {
+//                System.out.println("se encuentra en la poscion " + res);
+//            }
+//        }
+    
+//        public static void insertionSort() {
+//            int[] arr = {52, 17, 21, 74, 3, 25, 47};
+//            for (int i = 0; i < arr.length - 1; i++) {
+//                for (int j = 1 + i; j > 0 && arr[j] < arr[j-1]; j--) {
+//                    int aux = arr[j];
+//                    arr[j] = arr[j-1];
+//                    arr[j-1] = aux;
+//                }
+//            }
+//            for (int i = 0; i < arr.length; i++) {
+//                System.out.print(arr[i] + "; ");
+//            }
+//        }
+        
 //        public static void bubbleSort() {
 //            int[] arr = {52, 17, 21, 74, 3, 25, 47};
 //            int elemActual = 0;
@@ -514,6 +577,12 @@ public class Logica {
 
     public static void main(String[] args) {
         
+//        sonIgualesOno();
+        
+//        binarySearch(11);
+        
+//        insertionSort();
+        
 //        bubbleSort();
         
 //        transformarNumeros();
@@ -526,7 +595,7 @@ public class Logica {
         
 //        cifradoVigener("LA VIDA ES BONITA");
         
-        //cifradoVigener();
+//        cifradoVigener();
         
 //        generarCadenaAleatoria(6);
         
