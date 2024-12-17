@@ -8,6 +8,50 @@ public class Logica {
     
         
         
+//        public static void arraySinRepetidos() {
+//            int[] arr1 = {13, 71, 15, 13, 2, 9, 1, 2};
+//            int[] arr2 = new int[contador(arr1)];
+//            int pos = 0;
+//            boolean bandera = true;
+//            for (int i = 0; i < arr1.length; i++) {
+//                int j = i+1;
+//                while(j < arr1.length && bandera){
+//                    if(arr1[i] == arr1[j]) {
+//                        bandera = false;
+//                    }
+//                    j++;
+//                }
+//                if(bandera) {
+//                    arr2[pos] = arr1[i];
+//                    pos++;
+//                }
+//                bandera = true;
+//            }
+//            for (int j = 0; j < arr2.length; j++) {
+//                System.out.print(arr2[j] + "; ");
+//            }
+//        }
+//        
+//        public static int contador(int[] arr1) {
+//            int contador = 0;
+//            int i = 0;
+//            while(i < arr1.length) {
+//                int j = i+1;
+//                int aux = 0;
+//                while(j < arr1.length) {
+//                    if(arr1[i] == arr1[j]){
+//                        aux = arr1[j];
+//                    }
+//                    j++;
+//                }
+//                if(aux != arr1[i]) {
+//                    contador++;
+//                }
+//                i++;
+//            }
+//            return contador;
+//        }
+        
 //        public static void sonIgualesOno() {
 //            int[] arr1 = {9, 11, 20};
 //            int[] arr2 = {20, 23, 98, 11, 9, 31};
@@ -129,15 +173,15 @@ public class Logica {
 //            }
 //        }
         
-        public static int[] llenarArreglo2(int tam) {
-            int[] arr = new int[tam];
-            for (int i = arr.length - 1; i >= 0; i--) {
-                int numero = (int) (Math.random() * 100);
-                arr[i] = numero;
-                System.out.print(arr[i] + "; ");
-            }
-            return arr;
-        }
+//        public static int[] llenarArreglo2(int tam) {
+//            int[] arr = new int[tam];
+//            for (int i = arr.length - 1; i >= 0; i--) {
+//                int numero = (int) (Math.random() * 100);
+//                arr[i] = numero;
+//                System.out.print(arr[i] + "; ");
+//            }
+//            return arr;
+//        }
     
 //        public static void cifradoVigener(String cadena) {
 //            String resultado = "";
@@ -576,6 +620,8 @@ public class Logica {
 //        }
 
     public static void main(String[] args) {
+        
+//        arraySinRepetidos();
         
 //        sonIgualesOno();
         
