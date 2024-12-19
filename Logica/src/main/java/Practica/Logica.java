@@ -6,7 +6,63 @@ public class Logica {
 //        https://www.youtube.com/playlist?list=PLeZ7bixkO9gGIy7i_6CitcOaIzOYTvzg-
 //        el boli sabe
     
-        
+//        public static void transpuestaMatriz() {
+//            int[][] matriz = {{1, 2, 3, 4},
+//                              {5, 6, 7, 8},
+//                              {9, 10, 11, 12},
+//                              {13, 14, 15, 16},
+//                              {17, 18, 19, 20}};
+//            int filaMatriz = matriz.length;
+//            int columnaMatriz = matriz[0].length;
+//            int newFilaMatriz = columnaMatriz;
+//            int newColumnaMatriz = filaMatriz;
+//            int[][] newMatriz = new int[newFilaMatriz][newColumnaMatriz];
+//            for (int i = 0; i < newMatriz.length; i++) {
+//                for (int j = 0; j < newMatriz[i].length; j++) {
+//                    newMatriz[i][j] = matriz[j][i];
+//                }
+//            }
+//            for (int i = 0; i < matriz.length; i++) {
+//                for (int j = 0; j < matriz[i].length; j++) {
+//                    System.out.print(" " + matriz[i][j]);
+//                }
+//                System.out.println("");
+//            }
+//            System.out.println("");
+//            for (int i = 0; i < newMatriz.length; i++) {
+//                for (int j = 0; j < newMatriz[i].length; j++) {
+//                    System.out.print(" " + newMatriz[i][j]);
+//                }
+//                System.out.println("");
+//            }
+//        }
+//    
+////        public static void recorrerMatriz() {
+////            int[][] matriz = {{1,2,3,4,5},
+////                              {6,7,8,9,10},
+////                              {11,12,13,14,15},
+////                              {16,17,18,19,20},
+////                              {21,22,23,24,25}};
+////            String resultado = "";
+////            for (int i = matriz.length - 1; i >= 0 ; i--) {
+////                int elemento = matriz[i][0];
+////                resultado = resultado + elemento + " ";
+////            }
+////            for (int i = 1; i < matriz.length; i++) {
+////                int elemento = matriz[i][i];
+////                resultado = resultado + elemento + " ";
+////            }
+////            for (int i = matriz.length - 2; i >= 0 ; i--) {
+////                int elemento = matriz[i][matriz.length - 1];
+////                resultado = resultado + elemento + " ";
+////            }
+////            int j = matriz.length - 2;
+////            for (int i = 1; i < matriz.length - 1; i++, j--) {
+////                int elemento = matriz[i][j];
+////                resultado = resultado + elemento + " ";
+////            }
+////            System.out.println(resultado);
+////        }
         
 //        public static void arraySinRepetidos() {
 //            int[] arr1 = {13, 71, 15, 13, 2, 9, 1, 2};
@@ -621,6 +677,10 @@ public class Logica {
 
     public static void main(String[] args) {
         
+//        transpuestaMatriz();
+        
+//        recorrerMatriz();
+        
 //        arraySinRepetidos();
         
 //        sonIgualesOno();
@@ -640,8 +700,6 @@ public class Logica {
 //        llenarArreglo(5);
         
 //        cifradoVigener("LA VIDA ES BONITA");
-        
-//        cifradoVigener();
         
 //        generarCadenaAleatoria(6);
         
