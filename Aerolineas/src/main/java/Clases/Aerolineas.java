@@ -200,7 +200,7 @@ public class Aerolineas {
         System.out.println("Tiquete vendido exitosamente");
         System.out.println(silla);
     }
-
+    
     public static void cambiarSilla(int identificacion, int vuelo, Silla silla) {
         Vuelo vueloAsignado = vuelos.get(vuelo);
         int i = 0;
