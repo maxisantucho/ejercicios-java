@@ -1,6 +1,8 @@
 
 package Practica;
 
+import java.util.ArrayList;
+
 public class Logica {
         
 //        https://www.youtube.com/playlist?list=PLeZ7bixkO9gGIy7i_6CitcOaIzOYTvzg-
@@ -20,22 +22,22 @@ public class Logica {
 //            }
 //        }
         
-        public static void agregarPosicionEnArray(int[] arrNum) {
-            int[] arr = {1, 2, 3, 4, 5};
-            int[] arrAux = new int[arr.length + arrNum.length];
-            for (int i = 0; i < arr.length; i++) {
-                arrAux[i] = arr[i];
-            }
-            int j = 0;
-            for (int i = arr.length; i < arrAux.length; i++) {
-                arrAux[i] = arrNum[j];
-                j++;
-            }
-            arr = arrAux;
-            for (int i = 0; i < arr.length; i++) {
-                System.out.print(arr[i] + " ");
-            }
-        }
+//        public static void agregarPosicionEnArray(int[] arrNum) {
+//            int[] arr = {1, 2, 3, 4, 5};
+//            int[] arrAux = new int[arr.length + arrNum.length];
+//            for (int i = 0; i < arr.length; i++) {
+//                arrAux[i] = arr[i];
+//            }
+//            int j = 0;
+//            for (int i = arr.length; i < arrAux.length; i++) {
+//                arrAux[i] = arrNum[j];
+//                j++;
+//            }
+//            arr = arrAux;
+//            for (int i = 0; i < arr.length; i++) {
+//                System.out.print(arr[i] + " ");
+//            }
+//        }
     
 //        public static void transpuestaMatriz() {
 //            int[][] matriz = {{1, 2, 3, 4},
