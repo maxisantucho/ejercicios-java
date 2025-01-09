@@ -7,6 +7,29 @@ public class Logica {
         
 //        https://www.youtube.com/playlist?list=PLeZ7bixkO9gGIy7i_6CitcOaIzOYTvzg-
 //        el boli sabe
+
+//    public static void selectionSort() {
+//        int[] arr = {6, 4, 5, 2, 3, 1};
+//        for (int i = 0; i < arr.length; i++) {
+//            System.out.print(arr[i] + " ");
+//        }
+//        for (int i = 0; i < arr.length; i++) {
+//            int aux = arr[i];
+//            int index = i;
+//            for (int j = i; j < arr.length; j++) {
+//                if(aux > arr[j]) {
+//                    aux = arr[j];
+//                    index = j;
+//                }
+//            }
+//            arr[index] = arr[i];
+//            arr[i] = aux;
+//        }
+//        System.out.println("");
+//        for (int i = 0; i < arr.length; i++) {
+//            System.out.print(arr[i] + " ");
+//        }
+//    }
     
 //        public static void agregarPosicionEnArray() {
 //            int[] arr = {1, 2, 3, 4, 5};
@@ -709,6 +732,8 @@ public class Logica {
 //        }
 
     public static void main(String[] args) {
+        
+//        selectionSort();
         
 //        int[] num = {6, 7, 8, 9, 10};
         
