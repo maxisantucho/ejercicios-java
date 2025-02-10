@@ -48,7 +48,7 @@ public class Battleship {
             System.out.println();
         }
     }
-
+    
     public static void colocarBarco(char[] columnas) {
         System.out.println("Ingrese cordenadas del barco:");
         System.out.print("> ");
@@ -60,8 +60,8 @@ public class Battleship {
             if(sonCoordValidas(inicio, fin)) {
                 int longitud = 0;
                 if(inicio.charAt(0) == fin.charAt(0)) {
-                    int empieza = Integer.parseInt(inicio.charAt(1) + "");
-                    int termina = Integer.parseInt(fin.charAt(1) + "");
+                    int empieza = Integer.parseInt(inicio.substring(1));
+                    int termina = Integer.parseInt(fin.substring(1));
                     if(empieza < termina) {
                         for (int i = empieza; i <= termina; i++) {
                             longitud++;
@@ -97,7 +97,7 @@ public class Battleship {
                         }
                         System.out.println("Length: " + longitud);
                         for (int i = primer; i <= ultimo; i++) {
-                            System.out.print(columnas[i] + "" + inicio.charAt(1) + " ");
+                            System.out.print(columnas[i] + inicio.substring(1) + " ");
                         }
                     } else {
                         for (int i = primer; i >= ultimo; i--) {
@@ -105,7 +105,7 @@ public class Battleship {
                         }
                         System.out.println("Length: " + longitud);
                         for (int i = primer; i >= ultimo; i--) {
-                            System.out.print(columnas[i] + "" + inicio.charAt(1) + " ");
+                            System.out.print(columnas[i] + inicio.substring(1) + " ");
                         }
                     }
                 }
@@ -117,24 +117,28 @@ public class Battleship {
         }
     }
 
-    public static boolean sonCoordValidas(String inicio, String fin) {
+    public static boolean sonCoordValidas(String inicio, String fin) { //A1 A4
         if(!esDatoValido(inicio) || !esDatoValido(fin)) {
             return false;
         }
-        char inicioFila = inicio.charAt(0);
-        char inicioColumna = fin.charAt(0);
-        char finFila = inicio.charAt(1);
-        char finColumna = fin.charAt(1);
-        return (inicioFila == inicioColumna || finFila == finColumna);
+        String inicioFila = inicio.substring(0, 1);
+        String inicioColumna = inicio.substring(1);
+        String finFila = fin.substring(0, 1);
+        String finColumna = fin.substring(1);
+        return (inicioFila.equalsIgnoreCase(finFila) || inicioColumna.equalsIgnoreCase(finColumna));
     }
 
     public static boolean esDatoValido(String coordenada) {
-        if(coordenada.length() != 2) {
-            return false;
+        if(coordenada.length() == 2) {
+            char columna = coordenada.charAt(0);
+            char fila = coordenada.charAt(1);
+            return (columna >= 'A' && columna <= 'J' && fila >= '1' && fila <= '9');
+        } else if(coordenada.length() == 3) {
+            char columna = coordenada.charAt(0);
+            String fila = coordenada.charAt(1) + "" + coordenada.charAt(2);
+            return (columna >= 'A' && columna <= 'J' && fila.equalsIgnoreCase("10"));
         }
-        char columna = coordenada.charAt(0);
-        char fila = coordenada.charAt(1);
-        return (columna >= 'A' && columna <= 'J' && fila >= '1' && fila <= '9');
+        return false;
     }
 
 }
