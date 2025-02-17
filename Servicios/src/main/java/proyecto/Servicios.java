@@ -20,14 +20,21 @@ public class Servicios {
             int opcion = s.mostrarMenu();
 
             s.ejecutarPrograma(opcion);
-            
-            System.out.print("Desea seguir agregando servicios ? ingrese 3 ");
-            
-            seguir = Integer.parseInt(sc.nextLine());
+
+            try {
+                System.out.println("Desea seguir agregando servicios ? ingrese el numero 3:");
+                seguir = Integer.parseInt(sc.nextLine());
+            } catch (NumberFormatException ime) {
+                System.out.println("Error. No es un entero");
+            }
 
         }
-        
-        s.mostrarTrabajos();
+
+        if (s.servicios.isEmpty()) {
+            System.out.println("");
+        } else {
+            s.mostrarTrabajos();
+        }
 
     }
 
@@ -36,8 +43,12 @@ public class Servicios {
         do {
             System.out.println("1. Trabajo de pintura");
             System.out.println("2. Revision de alarma");
-            System.out.print("Ingrese una opcion: ");
-            opcion = Integer.parseInt(sc.nextLine());
+            try {
+                System.out.print("Ingrese una opcion: ");
+                opcion = Integer.parseInt(sc.nextLine());
+            } catch (NumberFormatException ime) {
+                System.out.print("Error. No es un entero");
+            }
         } while (opcion < 1 && opcion > 2);
         return opcion;
     }
@@ -52,7 +63,7 @@ public class Servicios {
                 agregarRevisionAlarma();
                 break;
             default:
-                System.out.println("Opcion incorrecta.");
+                System.out.println("Opcion incorrecta");
                 break;
         }
     }
